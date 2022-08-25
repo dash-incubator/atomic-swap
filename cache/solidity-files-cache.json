@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "G:\\atomic-swap\\contracts\\AtomicSwap.sol": {
+      "lastModificationDate": 1658943243583,
+      "contentHash": "3051d6fd94233e5ea37855f4d30c2176",
+      "sourceName": "contracts/AtomicSwap.sol",
+      "solcConfig": {
+        "version": "0.8.15",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.15"
+      ],
+      "artifacts": [
+        "AtomicSwap"
+      ]
+    }
+  }
+}

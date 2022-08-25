@@ -1,0 +1,60 @@
+{
+    "atomWatch": [
+        {
+            "files": "**/*.js",
+            "command": "npm run build:web"
+        },
+        {
+            "files": "**/*.ts",
+            "command": "npm run build:web"
+        },
+        {
+            "files": "**/*.scss",
+            "command": "npm run build:css"
+        }
+    ],
+    "author": "ICJR",
+    "dependencies": {
+        "@dashevo/wallet-lib": "^7.22.13"
+    },
+    "devDependencies": {
+        "@dashevo/dashcore-lib": "^0.19.40",
+        "@dashevo/dashd-rpc": "^2.4.1",
+        "@metamask/providers": "^9.0.0",
+        "@nomiclabs/hardhat-ethers": "^2.1.0",
+        "@nomiclabs/hardhat-etherscan": "^3.1.0",
+        "@nomiclabs/hardhat-waffle": "^2.0.3",
+        "@openzeppelin/contracts": "^4.7.0",
+        "@openzeppelin/test-helpers": "^0.5.15",
+        "chai": "^4.3.6",
+        "eslint": "^8.19.0",
+        "eslint-plugin-mocha": "^10.0.5",
+        "eslint-plugin-node": "^11.1.0",
+        "ethereum-waffle": "^3.4.4",
+        "ethers": "^5.6.4",
+        "glob": "^7.1.7",
+        "hardhat": "^2.10.1",
+        "hardhat-gas-reporter": "^1.0.8",
+        "node-polyfill-webpack-plugin": "^1.1.4",
+        "npm-run-all": "^4.1.3",
+        "prettier": "^2.7.1",
+        "prettier-plugin-solidity": "^1.0.0-dev.22",
+        "solidity-coverage": "^0.7.21",
+        "ts-loader": "^9.3.0",
+        "tsconfig-paths-webpack-plugin": "^3.5.2",
+        "ui": "git+https://github.com/esportsplus/ui.git",
+        "webpack": "^5.22.0",
+        "webpack-cli": "^4.5.0"
+    },
+    "name": "atomic-swap",
+    "private": false,
+    "scripts": {
+        "build": "run-p build:css build:ts build:web",
+        "build:css": "webpack --config node_modules/ui/webpack.sass.config.js --env=input=./src --env=output=./dist/css",
+        "build:ts": "tsc",
+        "build:web": "webpack --config webpack.typescript.config.js --env=directory={%INIT_CWD%/src,%INIT_CWD%/node_modules/ui} --env=output=%INIT_CWD%/dist/js --env=production=false",
+        "test": "hardhat test",
+        "test:gas": "REPORT_GAS=true npx hardhat test"
+    },
+    "version": "0.0.1"
+}

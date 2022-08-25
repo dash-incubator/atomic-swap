@@ -1,0 +1,26 @@
+body {
+    --background: var(--color-grey-400);
+    --color: var(--color-text-400);
+    --font-family: 'Montserrat', sans-serif;
+    --font-size: var(--font-size-400);
+    --font-weight: var(--font-weight-400);
+    --letter-spacing: 0.01618em;
+    --line-height: var(--line-height-400);
+
+
+    --background-primary-300: var(--color-blue-300);
+    --background-primary-400: var(--color-blue-400);
+    --background-primary-500: var(--color-blue-500);
+
+    --color-primary-300: var(--color-blue-300);
+    --color-primary-400: var(--color-blue-400);
+    --color-primary-500: var(--color-blue-500);
+
+    --background-secondary-300: var(--color-red-300);
+    --background-secondary-400: var(--color-red-400);
+    --background-secondary-500: var(--color-red-500);
+
+    --color-secondary-300: var(--color-red-300);
+    --color-secondary-400: var(--color-red-400);
+    --color-secondary-500: var(--color-red-500);
+}

@@ -1,0 +1,39 @@
+@use 'ui/lib';
+
+.header {
+    @include lib.position(absolute, top);
+    width: 100vw;
+    z-index: 3;
+
+    &-logo {
+        top: calc(var(--padding) + 6px);
+        z-index: 1;
+
+        @include lib.breakpoint(min-width, 1000px) {
+            @include lib.position(absolute, horizontal);
+        }
+
+        @include lib.breakpoint(max-width, 1000px) {
+            @include lib.position(absolute, null null null 0);
+        }
+
+        &,
+        &-icon {
+            height: auto;
+            width: 120px;
+        }
+    }
+
+    .group-item {
+        &:first-child {
+            > .button {
+                margin-left: calc(var(--padding-horizontal) * -1);
+            }
+        }
+        &:last-child {
+            > .button {
+                margin-right: calc(var(--padding-horizontal) * -1);
+            }
+        }
+    }
+}

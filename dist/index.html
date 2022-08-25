@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <meta name='viewport' content='width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimal-ui'>
+
+        <link href='./favicon.ico' rel='icon' type="image/x-icon">
+        <link href='./css/themes/default.css' rel='stylesheet' type='text/css'>
+        <link href='./css/app.css' rel='stylesheet' type='text/css'>
+
+        <noscript>
+            Javascript Is Required To View This Website! <br />
+
+            <a href='https://www.enable-javascript.com/' target='_blank'>
+                Follow These Instructions To Enable Javascript In Your Web Browser.
+            </a>
+        </noscript>
+    </head>
+    <body>
+        <section
+            class='site'
+            data-bind='{"ref": "scrollbar.mount[],scrollbar.width.mount,scrollto.mount,site.container", "refs": {"controls": "site.controls", "scrollbar": "scrollbar.site"}}'
+            data-scroll='controls,scrollbar'
+            data-scrollbar
+        >
+            <header class="header">
+                <div class="container --flex-horizontal-space-between --max-width-1400px --padding-top --padding-600">
+                    <div class="group group--offset-top --margin-100">
+                        <div class="group-item --active --pointer-events-auto">
+                            <div class="button --background-black --background-state --background-transparent --color-text-500 --color-state --color-white --padding-horizontal-400 --padding-vertical-300 --text-bold-600 --text-uppercase --text-200" data-click='page.initiate'>
+                                Initiate
+                            </div>
+                        </div>
+
+                        <div class="group-item --pointer-events-auto">
+                            <div class="button --background-black --background-state --background-transparent --color-text-500 --color-state --color-white --padding-horizontal-400 --padding-vertical-300 --text-bold-600 --text-uppercase --text-200" data-click='page.participate'>
+                                Participate
+                            </div>
+                        </div>
+
+                        <div class="group-item" style='margin-left: auto;'>
+                            <div class='--active --hidden-not-active --margin-horizontal --margin-100' data-bind='{"ref": "web3.connect.button"}' data-click='web3.connect'>
+                                <div class="button --background-primary --background-state --border-radius-800 --color-grey-500 --color-state --color-white --padding-300 --padding-horizontal-500 --text-bold-600 --text-uppercase --text-200">
+                                    Connect Metamask
+                                </div>
+                            </div>
+
+                            <div class='--hidden-not-active --margin-horizontal --margin-100' data-bind='{"ref": "web3.connected.button"}'>
+                                <div class="button --background-black --background-state --border-radius-800 --color-grey-500 --color-state --color-white --padding-300 --padding-horizontal-500 --pointer-events-none --text-bold-600 --text-uppercase --text-200">
+                                    Connected!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class='page --min-height --min-height-viewport' data-bind='{"ref": "site.scrolltop"}'>
+                <div class="container --flex-center --max-width-400px --spacer-top --spacer-800" data-bind='{"ref": "page.container"}'>
+
+                    <div class="button button--processing --color-primary-400 --pointer-event-none --size-700"></div>
+
+                </div>
+            </section>
+
+            <div class='anchors' style='position: fixed'>
+                <div class='alert anchor anchor--ne --flex-row' data-bind='{"ref": "alert.error.alert"}' >
+                    <div class='button --background-state --background-red --border-radius-0px --color-state --color-white --flex-center --width-40px' data-bind='{"refs": {"deactivate": "alert.error.alert"}}' data-click='deactivate'>
+                        <div class="icon --size-300">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3.527 14.948a.176.176 0 01-.248 0L1.051 12.72a.176.176 0 010-.248l11.42-11.419a.176.176 0 01.248 0l2.229 2.228a.174.174 0 010 .248L3.527 14.948z"/><path d="M12.472 14.948c.068.068.18.068.248 0l2.229-2.229a.176.176 0 000-.248L3.528 1.052a.176.176 0 00-.248 0L1.052 3.28a.176.176 0 000 .248l11.42 11.42z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class='--background --background-white-400 --flex-fill --padding' data-bind='{"ref": "alert.error.messages"}'></div>
+                </div>
+
+                <div class='alert anchor anchor--ne --flex-row' data-bind='{"ref": "alert.success.alert"}' >
+                    <div class='button --background-state --background-green --border-radius-0px --color-state --color-white --flex-center --width-40px' data-bind='{"refs": {"deactivate": "alert.success.alert"}}' data-click='deactivate'>
+                        <div class="icon --size-300">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3.527 14.948a.176.176 0 01-.248 0L1.051 12.72a.176.176 0 010-.248l11.42-11.419a.176.176 0 01.248 0l2.229 2.228a.174.174 0 010 .248L3.527 14.948z"/><path d="M12.472 14.948c.068.068.18.068.248 0l2.229-2.229a.176.176 0 000-.248L3.528 1.052a.176.176 0 00-.248 0L1.052 3.28a.176.176 0 000 .248l11.42 11.42z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class='--background --background-white-400 --flex-fill --padding' data-bind='{"ref": "alert.success.messages"}'></div>
+                </div>
+            </div>
+
+            <div class='scrollbar scrollbar--fixed scrollbar--hidden' data-bind='{"ref": "scrollbar.site"}'></div>
+        </section>
+
+        <script src='./js/app.js'></script>
+    </body>
+</html>
